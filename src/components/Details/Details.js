@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View, StyleSheet } from 'react-native';
 
-const Details = () => {
+const Details = ({item}) => {
     return (
         <View>
             <Text>Details</Text>
@@ -12,5 +12,14 @@ const Details = () => {
       
     );
 };
+
+const styles = StyleSheet.create({
+    tabBar:{
+      // backgroundColor: colors.white,
+      // borderTopLeftRadius: 20,
+      // borderTopRightRadius: 20,
+     
+    },
+  })
 
 export default Details;

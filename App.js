@@ -28,7 +28,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return(
-    <Tab.Navigator
+    <Tab.Navigator screenOptions={{ headerShown: false }}
     tabBarOptions={{
       style: styles.tabBar,
       activeTintColor: colors.orange,
@@ -57,7 +57,7 @@ const App= () =>  {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="OnBoard" component={OnBoardControl} /> */}
         {/* <Stack.Screen name="Login" component={LogInScreen} /> */}
-        <Stack.Screen name="TabNavigator" component={TabNavigator} Options={{ headerShown: false }}  />
+        <Stack.Screen name="TabNavigator" component={TabNavigator}  />
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
   </NavigationContainer>
@@ -71,9 +71,10 @@ const App= () =>  {
 
 const styles = StyleSheet.create({
   tabBar:{
-    backgroundColor: colors.white,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    // backgroundColor: colors.white,
+    // borderTopLeftRadius: 20,
+    // borderTopRightRadius: 20,
+   
   },
 })
 
