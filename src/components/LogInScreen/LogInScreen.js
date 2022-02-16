@@ -8,6 +8,8 @@ const LogInScreen = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+
+    
     initializeAuthentication();
     const auth = getAuth();
 
@@ -16,7 +18,7 @@ const LogInScreen = () => {
     useEffect(()=>{
         auth.onAuthStateChanged(user =>{
             if (user) {
-               navigation.navigate("Home")
+               navigation.navigate("TabNavigator")
             }
         })
     },[])
@@ -82,6 +84,10 @@ const LogInScreen = () => {
 
     </KeyboardAvoidingView>
     );
+
+    return {
+        email,
+    }
 };
 
 export default LogInScreen;

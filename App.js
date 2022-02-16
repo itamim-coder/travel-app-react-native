@@ -17,6 +17,8 @@ import colors from './assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Details from './src/components/Details/Details'
+import OrderForm from './src/components/OrderForm/OrderForm'
+import MyOrder from './src/components/Profile/MyOrder/MyOrder'
 
 
 Entypo.loadFont();
@@ -28,7 +30,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return(
-    <Tab.Navigator screenOptions={{ headerShown: false }}
+    <Tab.Navigator 
     tabBarOptions={{
       style: styles.tabBar,
       activeTintColor: colors.orange,
@@ -36,12 +38,12 @@ const TabNavigator = () => {
       showLabel: false,
     }}
     >
-      <Tab.Screen name="Home" component={Home} options={{
+      {/* <Tab.Screen  name="Home" component={Home} options={{
       tabBarIcon: ({color}) => <Entypo name="home" size={32} color={color}/>
       }}/>
       <Tab.Screen name="Liked" component={Liked} options={{
       tabBarIcon: ({color}) => <Entypo name="heart" size={32} color={color}/>
-      }}/>
+      }}/> */}
       <Tab.Screen name="Profile" component={Profile} options={{
       tabBarIcon: ({color}) => <MaterialCommunityIcons name="account" size={32} color={color}/>
       }}/>
@@ -56,9 +58,11 @@ const App= () =>  {
    <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="OnBoard" component={OnBoardControl} /> */}
-        {/* <Stack.Screen name="Login" component={LogInScreen} /> */}
+        <Stack.Screen name="Login" component={LogInScreen} />
         <Stack.Screen name="TabNavigator" component={TabNavigator}  />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="OrderForm" component={OrderForm} />
+        <Stack.Screen name="MyOrder" component={MyOrder} />
       </Stack.Navigator>
   </NavigationContainer>
     </>

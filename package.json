@@ -18,6 +18,7 @@
     "firebase": "^9.6.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-hook-form": "^7.27.0",
     "react-native": "0.64.3",
     "react-native-app-intro-slider": "^4.0.4",
     "react-native-safe-area-context": "^3.3.2",
