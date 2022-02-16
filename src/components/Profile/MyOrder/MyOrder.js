@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
     },
     myOrderTitle:{
-        fontSize: 16,
+        fontSize: 56,
         fontWeight:"bold",
     },
     order:{

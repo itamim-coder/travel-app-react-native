@@ -38,12 +38,12 @@ const TabNavigator = () => {
       showLabel: false,
     }}
     >
-      {/* <Tab.Screen  name="Home" component={Home} options={{
+      <Tab.Screen  name="Home" component={Home} options={{
       tabBarIcon: ({color}) => <Entypo name="home" size={32} color={color}/>
       }}/>
       <Tab.Screen name="Liked" component={Liked} options={{
       tabBarIcon: ({color}) => <Entypo name="heart" size={32} color={color}/>
-      }}/> */}
+      }}/>
       <Tab.Screen name="Profile" component={Profile} options={{
       tabBarIcon: ({color}) => <MaterialCommunityIcons name="account" size={32} color={color}/>
       }}/>
@@ -57,7 +57,7 @@ const App= () =>  {
     <>
    <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen name="OnBoard" component={OnBoardControl} /> */}
+        <Stack.Screen name="OnBoard" component={OnBoardControl} />
         <Stack.Screen name="Login" component={LogInScreen} />
         <Stack.Screen name="TabNavigator" component={TabNavigator}  />
         <Stack.Screen name="Details" component={Details} />
