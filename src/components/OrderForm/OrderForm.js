@@ -19,15 +19,15 @@ const OrderForm =({route})=> {
 
 const email = auth.currentUser.email;
 const price = item?.price;
-const product = item?.name;
+const destination = item?.destination;
 console.log(email)
 
 
  const onSubmit = data => {
        data.email = email;
        data.price = price;
-      data.productName = product;
-       fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder",{
+      data.destinationName = destination;
+       fetch("http://localhost:5000/confirmOrder",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),            
@@ -40,7 +40,7 @@ console.log(email)
      console.log(data)};
     // const handleOrder = (data, event) =>{
     //     data.price = price;
-    //     data.productName = name;
+    //     data.packageName = name;
 
     //       fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder",{
     //         method: "POST",

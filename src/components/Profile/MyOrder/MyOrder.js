@@ -13,7 +13,7 @@ const MyOrder = ({}) => {
     const userEmail = auth.currentUser.email;
 
     useEffect(()=>{
-        fetch(`https://stormy-woodland-20048.herokuapp.com/myorder/${userEmail}`)
+        fetch(`http://localhost:5000/myorder/${userEmail}`)
         .then(res => res.json())
         .then(data => setMyOrders(data))
     },[])  
@@ -26,8 +26,9 @@ const MyOrder = ({}) => {
          myOrders.map((myOrder) =>
          
          (
-             <View style={styles.order}>     
-                 <Text>Ordered product: {myOrder.productName}</Text>
+             <View style={styles.order}
+             key={myOrder._id}>     
+                 <Text>Ordered package: {myOrder.destinationName}</Text>
                  <Text>Address: {myOrder.address}</Text>
              </View>
          ))

@@ -4,12 +4,12 @@ import colors from '../../../assets/colors/colors';
 
 const Home = ({navigation}) => {
 
-  const [products, setProducts] = useState([])
+  const [packages, setpackages] = useState([])
 
   useEffect(() =>{
-      fetch('https://stormy-woodland-20048.herokuapp.com/products')
+      fetch('http://localhost:5000/packages')
       .then(res => res.json())
-      .then(data => setProducts(data))
+      .then(data => setpackages(data))
   }, [])
 
   const renderDiscoverItem = ({item}) =>{
@@ -26,7 +26,7 @@ const Home = ({navigation}) => {
         ]}
         imageStyle={styles.discoverItemImage}
         >
-          <Text style={styles.discoverItemTitle}>{item.name}</Text>
+          <Text style={styles.discoverItemTitle}>{item.destination}</Text>
           <Text style={styles.discoverItemPrice}>Price: ${item.price}</Text>
         </ImageBackground>
       </TouchableOpacity>
@@ -47,7 +47,7 @@ const Home = ({navigation}) => {
         ]}
         imageStyle={styles.learnMoreItemImage}
         >
-          <Text style={styles.learnMoreItemTitle}>{item.name}</Text>
+          <Text style={styles.learnMoreItemTitle}>{item.destination}</Text>
          
         </ImageBackground>
       </TouchableOpacity>
@@ -62,7 +62,7 @@ const Home = ({navigation}) => {
         {/* Discover */}
         <SafeAreaView>
           <View style={styles.discoverWrapper}>
-            <Text style={styles.discoverTitle}>Discover</Text>
+            <Text style={styles.discoverTitle}>Our Packages</Text>
             <View style={styles.discoverCategoriesWrapper}>
             <Text style={[styles.discoverCategoryText, {color: colors.orange}]}>
               All
@@ -73,7 +73,7 @@ const Home = ({navigation}) => {
           </View>
           <View style={styles.discoverItemsWrapper}>
             <FlatList
-              data={products}
+              data={packages}
               renderItem={renderDiscoverItem}
               keyExtractor={(item) => item.id}
               horizontal
@@ -87,7 +87,7 @@ const Home = ({navigation}) => {
           <Text style={styles.learnMoreTitle}>Learn More</Text>
           <View style={styles.learnMoreItemsWrapper}>
             <FlatList
-              data={products}
+              data={packages}
               renderItem={renderLearnMoreItem}
               keyExtractor={(item) => item.id}
               horizontal
