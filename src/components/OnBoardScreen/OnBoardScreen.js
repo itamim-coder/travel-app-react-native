@@ -5,20 +5,20 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 
 const data = [
   {
-    title: 'Title 1',
-    text: 'Description.\nSay something cool',
+    title: 'Travel with us',
+    text: 'Easy booking any corner of the world',
     image: require('../../../assets/images/undraw_Travelers_re_y25a.png'),
     bg: '#59b2ab',
   },
   {
-    title: 'Title 2',
-    text: 'Other cool stuff',
+    title: 'Cheaper',
+    text: 'Low cost in every package',
     image: require('../../../assets/images/undraw_Travel_booking_re_6umu.png'),
     bg: '#febe29',
   },
   {
-    title: 'Rocket guy',
-    text: "I'm already out of descriptions\n\nLorem ipsum bla bla bla",
+    title: 'Get Discount',
+    text: "Refer and win discount",
     image: require('../../../assets/images/undraw_Airport_re_oqk1.png'),
     bg: '#22bcb5',
   },

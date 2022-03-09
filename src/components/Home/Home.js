@@ -145,11 +145,19 @@ const styles = StyleSheet.create({
   },
   discoverItemTitle: {
     fontSize: 18,
-    color: colors.darkGray,
+    borderTopRightRadius: 5,
+    borderTopLeftRadius: 5,
+    backgroundColor: colors.darkGray,
+    // width: "100%",
+    color: colors.white,
 
   },
   discoverItemPrice: {
     fontSize: 18,
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
+    backgroundColor: colors.darkGray,
+    color: colors.white,
   },
   learnMoreWrapper:{
     marginTop: 20,
