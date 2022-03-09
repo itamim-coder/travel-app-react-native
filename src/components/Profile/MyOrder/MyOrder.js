@@ -13,7 +13,7 @@ const MyOrder = ({}) => {
     const userEmail = auth.currentUser.email;
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myorder/${userEmail}`)
+        fetch(`https://murmuring-garden-76576.herokuapp.com/myorder/${userEmail}`)
         .then(res => res.json())
         .then(data => setMyOrders(data))
     },[])  

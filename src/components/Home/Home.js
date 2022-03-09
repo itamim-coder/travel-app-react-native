@@ -7,7 +7,7 @@ const Home = ({navigation}) => {
   const [packages, setpackages] = useState([])
 
   useEffect(() =>{
-      fetch('http://localhost:5000/packages')
+      fetch('https://murmuring-garden-76576.herokuapp.com/packages')
       .then(res => res.json())
       .then(data => setpackages(data))
   }, [])

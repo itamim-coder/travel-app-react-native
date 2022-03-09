@@ -27,7 +27,7 @@ console.log(email)
        data.email = email;
        data.price = price;
       data.destinationName = destination;
-       fetch("http://localhost:5000/confirmOrder",{
+       fetch("https://murmuring-garden-76576.herokuapp.com/confirmOrder",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),            
